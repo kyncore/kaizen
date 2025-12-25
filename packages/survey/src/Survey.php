@@ -1,9 +1,9 @@
 <?php
-namespace Kaizen\Feature1;
+namespace Kaizen\Survey;
 
 use Kaizen\Core\Client;
 
-class Feature1
+class Survey
 {
     private Client $client;
 
@@ -14,6 +14,6 @@ class Feature1
 
     public function doSomething(): string
     {
-        return "Feature1 using " . $this->client->getClientName();
+        return "Survey using " . $this->client->getClientName();
     }
 }
