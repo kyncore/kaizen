@@ -15,7 +15,7 @@
         "psr-4": {
             "Kaizen\\AwsAgent\\": "packages/aws_agent/src/",
             "Kaizen\\Core\\": "packages/core/src/",
-            "Kaizen\\Feature1\\": "packages/feature1/src/",
+            "Kaizen\\Survey\\": "packages/survey/src/",
             "Kaizen\\Feature2\\": "packages/feature2/src/"
         }
     },
@@ -23,7 +23,7 @@
         "psr-4": {
             "Kaizen\\AwsAgent\\Tests\\": "packages/aws_agent/tests/",
             "Kaizen\\Core\\Tests\\": "packages/core/tests/",
-            "Kaizen\\Feature1\\Tests\\": "packages/feature1/tests/",
+            "Kaizen\\Survey\\Tests\\": "packages/survey/tests/",
             "Kaizen\\Feature2\\Tests\\": "packages/feature2/tests/"
         }
     },
@@ -37,7 +37,7 @@
     "replace": {
         "kaizen/aws_agent": "self.version",
         "kaizen/core": "self.version",
-        "kaizen/feature1": "self.version",
+        "kaizen/survey": "self.version",
         "kaizen/feature2": "self.version"
     }
 }
