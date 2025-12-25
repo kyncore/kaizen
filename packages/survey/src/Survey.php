@@ -3,7 +3,7 @@ namespace Kaizen\Survey;
 
 use Kaizen\Core\Client;
 
-class Survey
+class SurveyService
 {
     private Client $client;
 
