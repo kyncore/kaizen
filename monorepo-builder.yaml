@@ -1,0 +1,8 @@
+parameters:
+  packages:
+    - packages/core
+    - packages/feature1
+    - packages/feature2
+    - packages/kaizendynamo
+  merged_composer_json_file: 'composer.json'
+  vendor: 'kaizen'

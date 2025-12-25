@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="vendor/autoload.php" colors="true" verbose="true">
+    <testsuites>
+        <testsuite name="Kaizen Core Tests">
+            <directory>./packages/core/tests</directory>
+        </testsuite>
+        <testsuite name="Kaizen Feature1 Tests">
+            <directory>./packages/feature1/tests</directory>
+        </testsuite>
+        <testsuite name="Kaizen Feature2 Tests">
+            <directory>./packages/feature2/tests</directory>
+        </testsuite>
+        <testsuite name="Kaizen DynamoWorker Tests">
+            <directory>./packages/aws_agent/tests</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>
