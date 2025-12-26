@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-use Symplify\MonorepoBuilder\Config\MBConfig;
-use Symplify\MonorepoBuilder\Release\ReleaseWorker\PushTagReleaseWorker;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symplify\MonorepoBuilder\Release\ReleaseWorker\PushSplitRepositoriesReleaseWorker;
+use Symplify\MonorepoBuilder\Release\ReleaseWorker\PushTagReleaseWorker;
 use Symplify\MonorepoBuilder\Release\ReleaseWorker\SetCurrentMutualDependenciesReleaseWorker;
 
-return static function (MBConfig $mbConfig): void {
-    $mbConfig->workers([
-        SetCurrentMutualDependenciesReleaseWorker::class,
-        PushSplitRepositoriesReleaseWorker::class,
-        PushTagReleaseWorker::class,
-    ]);
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+
+    $services->set(SetCurrentMutualDependenciesReleaseWorker::class);
+    $services->set(PushSplitRepositoriesReleaseWorker::class);
+    $services->set(PushTagReleaseWorker::class);
 };
