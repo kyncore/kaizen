@@ -4,7 +4,7 @@
   "type": "library",
   "require": {
     "php": "^7.4 || ^8.0",
-    "kaizen/core": "^1.0"
+    "kaizen/core": "*"
   },
   "autoload": {
     "psr-4": {

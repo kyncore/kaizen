@@ -1,0 +1,43 @@
+{
+    "name": "kaizen/monorepo",
+    "description": "Kaizen Monorepo",
+    "require": {
+        "aws/aws-sdk-php": "^3.337",
+        "php": "^7.4 || ^8.0"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.10",
+        "phpunit/phpunit": "^9.5",
+        "squizlabs/php_codesniffer": "^3.7",
+        "symplify/monorepo-builder": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kaizen\\AwsAgent\\": "packages/aws_agent/src/",
+            "Kaizen\\Core\\": "packages/core/src/",
+            "Kaizen\\Survey\\": "packages/survey/src/",
+            "Kaizen\\Feature2\\": "packages/feature2/src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Kaizen\\AwsAgent\\Tests\\": "packages/aws_agent/tests/",
+            "Kaizen\\Core\\Tests\\": "packages/core/tests/",
+            "Kaizen\\Survey\\Tests\\": "packages/survey/tests/",
+            "Kaizen\\Feature2\\Tests\\": "packages/feature2/tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "analyse": "phpstan analyse packages --level=max",
+        "cs-check": "phpcs --standard=PSR12 packages/",
+        "cs-fix": "phpcbf --standard=PSR12 packages/",
+        "build": "vendor/bin/monorepo-builder merge"
+    },
+    "replace": {
+        "kaizen/aws_agent": "self.version",
+        "kaizen/core": "self.version",
+        "kaizen/survey": "self.version",
+        "kaizen/feature2": "self.version"
+    }
+}
