@@ -1,8 +1,18 @@
 parameters:
+  # Packages inside the monorepo
   packages:
     - packages/core
-    - packages/feature1
-    - packages/feature2
-    - packages/kaizendynamo
+    - packages/survey
+    - packages/aws_agent
+
+  # Vendor name
+  vendor: kaizen
+
+  # Root composer.json to merge
   merged_composer_json_file: 'composer.json'
-  vendor: 'kaizen'
+
+  # Map each package directory to its release repository
+  directories_to_repositories:
+    packages/core: git@github.com:kyncore/kaizen-core.git
+    packages/survey: git@github.com:kyncore/kaizen-survey.git
+    packages/aws_agent: git@github.com:kyncore/kaizen-aws-agent.git
