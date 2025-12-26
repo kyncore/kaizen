@@ -1,21 +1,21 @@
 {
-  "name": "kaizen/core",
-  "description": "Kaizen Core package",
-  "type": "library",
-  "require": {
-    "php": "^7.4 || ^8.0"
-  },
-  "autoload": {
-    "psr-4": {
-      "Kaizen\\Core\\": "src/"
+    "name": "kaizen/core",
+    "description": "Kaizen Core package",
+    "type": "library",
+    "require": {
+        "php": "^7.4 || ^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kaizen\\Core\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Kaizen\\Core\\Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
     }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "Kaizen\\Core\\Tests\\": "tests/"
-    }
-  },
-  "require-dev": {
-    "phpunit/phpunit": "^9.5"
-  }
 }

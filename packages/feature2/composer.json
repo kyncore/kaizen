@@ -1,23 +1,23 @@
 {
-  "name": "kaizen/feature2",
-  "description": "Feature2 package",
-  "type": "library",
-  "require": {
-    "php": "^7.4 || ^8.0",
-    "kaizen/core": "*"
-  },
-  "autoload": {
-    "psr-4": {
-      "Kaizen\\Feature2\\": "src/"
+    "name": "kaizen/feature2",
+    "description": "Feature2 package",
+    "type": "library",
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "kaizen/core": "^1.0.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kaizen\\Feature2\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Kaizen\\Feature2\\Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "phpstan/phpstan": "^1.10"
     }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "Kaizen\\Feature2\\Tests\\": "tests/"
-    }
-  },
-  "require-dev": {
-    "phpunit/phpunit": "^9.5",
-    "phpstan/phpstan": "^1.10"
-  }
 }
