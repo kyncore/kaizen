@@ -10,6 +10,7 @@ use Symplify\MonorepoBuilder\Release\ReleaseWorker\UpdateBranchAliasReleaseWorke
 use Symplify\MonorepoBuilder\Release\ReleaseWorker\UpdateReplaceReleaseWorker;
 
 return static function (MBConfig $mbConfig): void {
+    $mbConfig->defaultBranch('main');
     // release workers - in order to execute
     $mbConfig->workers([
         UpdateReplaceReleaseWorker::class,
