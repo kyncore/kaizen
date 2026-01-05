@@ -9,6 +9,8 @@ use Symplify\MonorepoBuilder\Release\ReleaseWorker\SetNextMutualDependenciesRele
 use Symplify\MonorepoBuilder\Release\ReleaseWorker\TagVersionReleaseWorker;
 use Symplify\MonorepoBuilder\Release\ReleaseWorker\UpdateBranchAliasReleaseWorker;
 use Symplify\MonorepoBuilder\Release\ReleaseWorker\UpdateReplaceReleaseWorker;
+use Symplify\MonorepoBuilder\Release\ReleaseWorker\PushSplitRepositoriesReleaseWorker;
+
 
 return static function (MBConfig $mbConfig): void {
     $mbConfig->defaultBranch('main');
@@ -28,6 +30,7 @@ return static function (MBConfig $mbConfig): void {
         PushTagReleaseWorker::class,
         SetNextMutualDependenciesReleaseWorker::class,
         UpdateBranchAliasReleaseWorker::class,
+        PushSplitRepositoriesReleaseWorker::class,
         PushNextDevReleaseWorker::class,
     ]);
 };
