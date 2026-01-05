@@ -12,11 +12,12 @@ use Symplify\MonorepoBuilder\Release\ReleaseWorker\UpdateReplaceReleaseWorker;
 
 return static function (MBConfig $mbConfig): void {
     $mbConfig->defaultBranch('main');
-    $mbConfig->packageDirectories([
-        __DIR__ . '/packages/core',
-        __DIR__ . '/packages/survey',
-        __DIR__ . '/packages/aws_agent',
-    ]);
+    // $mbConfig->packageDirectories([
+    //     __DIR__ . '/packages/core',
+    //     __DIR__ . '/packages/survey',
+    //     __DIR__ . '/packages/aws_agent',
+    // ]);
+
 
     // release workers - in order to execute
     $mbConfig->workers([
